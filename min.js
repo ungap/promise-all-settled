@@ -1,0 +1,1 @@
+var allSettled=Promise.allSettled||function(t){return Promise.all(t.map(function(t){return Promise.resolve(t).then(this.$).catch(this._)},{$:function(t){return{status:"fulfilled",value:t}},_:function(t){return{status:"rejected",reason:t}}}))};
