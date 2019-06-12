@@ -1,6 +1,6 @@
 {
   "name": "@ungap/promise-all-settled",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A cross platform Promise.allSettled polyfill",
   "main": "cjs/index.js",
   "module": "esm/index.js",
