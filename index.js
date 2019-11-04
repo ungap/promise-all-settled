@@ -1,8 +1,9 @@
-var allSettled = Promise.allSettled || function ($) {
-  return Promise.all(
+var allSettled = Promise.allSettled || function ($) {'use strict';
+  var self = this;
+  return self.all(
     $.map(
       function (value) {
-        return Promise.resolve(value).then(this.$).catch(this._);
+        return self.resolve(value).then(this.$).catch(this._);
       },
       {
         $: function (value) {

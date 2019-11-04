@@ -7,3 +7,20 @@ A cross platform [Promise.allSettled](https://github.com/tc39/proposal-promise-a
   * CDN global utility via https://unpkg.com/@ungap/promise-all-settled
   * ESM via `import allSettled from '@ungap/promise-all-settled'`
   * CJS via `const allSettled = require('@ungap/promise-all-settled')`
+
+
+### Example
+
+```js
+const allSettled = require("@ungap/promise-all-settled");
+
+// use it via call
+allSettled.call(Promise, []);
+
+// or bind it:
+const $settled = allSettled.bind(Promise);
+
+// or put it in the Promise class
+if (!Promise.allSettled)
+  Promise.allSettled = allSettled;
+```
