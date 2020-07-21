@@ -1,4 +1,4 @@
-var allSettled = Promise.allSettled || function ($) {'use strict';
+var allSettled = (Promise.allSettled || function ($) {'use strict';
   var self = this;
   return self.all(
     $.map(
@@ -15,4 +15,4 @@ var allSettled = Promise.allSettled || function ($) {'use strict';
       }
     )
   );
-};
+}).bind(Promise);
